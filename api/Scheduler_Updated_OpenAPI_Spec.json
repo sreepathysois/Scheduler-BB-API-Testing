@@ -1,0 +1,3634 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Govstack Scheduler BB API",
+    "description": "Interfaces to services rendered by Scheduler building block",
+    "termsOfService": "TBD",
+    "contact": {
+      "email": "psramkumar2@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.0"
+  },
+  "externalDocs": {
+    "description": "Find out more about scheduler",
+    "url": "https://www.govstack.global/"
+  },
+  #"servers": [
+  #  {
+  #    "url": "http://ss2.egovstack.net/r1/eGovStack/COM/11222456/SchedulerBB/creg/",
+  #    "description": "Scheduler BB Security server"
+  #  }
+  #],
+  "tags": [
+    {
+      "name": "session",
+      "description": "session  API"
+    },
+    {
+      "name": "find",
+      "description": "find  API"
+    },
+    {
+      "name": "alert",
+      "description": "alert  API"
+    },
+    {
+      "name": "resources",
+      "description": "resources  API"
+    },
+    {
+      "name": "subscribers",
+      "description": "subscribers  API"
+    },
+    {
+      "name": "status",
+      "description": "status  API"
+    },
+    {
+      "name": "get_log_report",
+      "description": "log report"
+    }
+  ],
+  "paths": {
+    "/session/create_session/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "session"
+        ],
+        "summary": "create a new session",
+        "operationId": "createSession",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/sessionconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "ID of created session",
+                  "example": "4524458935"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to create a new session"
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/session/update_session/{requestor_Entity}/{requestor_Role}": {
+      "put": {
+        "tags": [
+          "session"
+        ],
+        "summary": "update a session",
+        "operationId": "updateSession",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "session_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/sessionconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success, session updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/sessionconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid session_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "session_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/session/cancel_session/{requestor_Entity}/{requestor_Role}": {
+      "delete": {
+        "tags": [
+          "session"
+        ],
+        "summary": "cancel a session",
+        "operationId": "cancelSession",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "session_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success, session cancelled"
+          },
+          "400": {
+            "description": "Invalid session_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to cancel"
+          },
+          "404": {
+            "description": "session_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/session/get_session_details/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "session"
+        ],
+        "summary": "get session details",
+        "operationId": "SessionDetail",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "session_id",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessiondetails",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/sessiondetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success,session details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/sessionconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid sessionId"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "sessionId not found"
+          }
+        }
+      }
+    },
+    "/session/get_session_list/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "session"
+        ],
+        "summary": "get list of sessions",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionfilter",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/sessionfilter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success,session list",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/session_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "filter not found"
+          }
+        }
+      }
+    },
+    "/session/update_session_Status/{requestor_Entity}/{requestor_Role}": {
+      "put": {
+        "tags": [
+          "session"
+        ],
+        "summary": "update status of specified Session(s)",
+        "operationId": "getStatus",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "source_BB_Id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessiontoken",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "sourceId/tokenId/status not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/session/request_session_Status/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "session"
+        ],
+        "summary": "send status requests to target BB",
+        "operationId": "requestsessionstatus",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "target_BB_Id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessiontoken",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid request"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to get"
+          },
+          "404": {
+            "description": "sourceId/tokenId/status not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/find_free_resource_slots/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "find"
+        ],
+        "summary": "get free slots of the given resource Ids",
+        "operationId": "getfreeresourceslots",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resourceIds",
+            "in": "query",
+            "description": "atleast one resource Id",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "resource1,resource2,resource3"
+            }
+          },
+          {
+            "name": "coinciding",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": false
+            }
+          },
+          {
+            "name": "date-range",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/date-range"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of free slots",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/slots"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid resourceId/Ids supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "resourceId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/find_free_resources/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "find"
+        ],
+        "summary": "get free slots of the given resource Ids",
+        "operationId": "getfreeslots",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "query",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "query",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "coinciding",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": false
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "boolean",
+              "example": false
+            }
+          },
+          {
+            "name": "date-range",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/date-range"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of free slots",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/slots"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid entityId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "entityId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/create_alert/{requestor_Entity}/{requestor_Role}": {
+      "post": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "create a new alert",
+        "description": "create a new alert to the session",
+        "operationId": "createAlert",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/alertconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "ID of created alert",
+                  "example": "6724453535"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to create a new alert"
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/update_alert/{requestor_Entity}/{requestor_Role}": {
+      "put": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "update an existing alert",
+        "operationId": "editALert",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "alertconfig",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/alertconfig"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "sucessfully updated"
+          },
+          "400": {
+            "description": "Invalid alertId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "alertId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/get_alert_details/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "get details of an alert",
+        "operationId": "alertDetails",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertdetails",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/alertdetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/alertconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid alertId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "alertId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/get_alert_list/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "list of alerts",
+        "operationId": "alertList",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertfilter",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/alertfilter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/alert_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid alertId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "alertId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/allocate_alert/{requestor_Entity}/{requestor_Role}": {
+      "post": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "allocate alerts to a session",
+        "operationId": "sessionAlerts",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid alertId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to allocate"
+          },
+          "404": {
+            "description": "alertId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/deallocate_alert/{requestor_Entity}/{requestor_Role}": {
+      "delete": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "send session alerts",
+        "operationId": "deallocatealert",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid alertId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to deallocate"
+          },
+          "404": {
+            "description": "alertId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/get_session_alerts/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "get details of an alert",
+        "operationId": "getsessionalerts",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertdetails",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/alertdetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/alert_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/alert/send_session_alert/{requestor_Entity}/{requestor_Role}": {
+      "post": {
+        "tags": [
+          "alert"
+        ],
+        "summary": "send session alerts",
+        "operationId": "sendsessionalerts",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "alertId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inline_response_200_1"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid alertId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to send alerts"
+          },
+          "404": {
+            "description": "alertId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resources/create_resource/{requestor_Entity}/{requestor_Role}": {
+      "post": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "create new resource.",
+        "description": "create a new resource",
+        "operationId": "createResource",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/resourceconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "ID of created resource",
+                  "example": "4524453535"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to create a new resource"
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resources/update_resource/{requestor_Entity}/{requestor_Role}": {
+      "put": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "update a resource.",
+        "description": "update perticular resource details",
+        "operationId": "updateResource",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/resourceconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid resource_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "resource_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resources/get_resource_details/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "get details of created resource.",
+        "description": "get details particular resource details",
+        "operationId": "getDetailsResource",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "resource_details",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/resourcedetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resourceconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid resource_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "resource_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resource/get_resource_list/{requestor_Entity}/{requestor_Role}": {
+      "get": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "list of resources",
+        "operationId": "resourceList",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "resource_filter",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/resourcefilter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resource_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid entityId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "entityId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resources/allocate_resources/{requestor_Entity}/{requestor_Role}": {
+      "post": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "allocate a resource",
+        "operationId": "allocateResource",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reourceId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid resourceId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to allocate"
+          },
+          "404": {
+            "description": "resourceId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resources/deallocate_resources/{requestor_Entity}/{requestor_Role}": {
+      "delete": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "deallocate a resource",
+        "operationId": "deallocateresources",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resourceId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid resourceId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to deallocate"
+          },
+          "404": {
+            "description": "resourceId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/resource/get_session_resources/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "resources"
+        ],
+        "summary": "get list of session resources",
+        "operationId": "sessionresourcelist",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "resource_details",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/resourcedetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/resource_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/create_subscriber/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "create a new subscriber",
+        "operationId": "createsubscriber",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscriberconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "ID of created subscriber",
+                  "example": "4524453535"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to create a new subscriber"
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/update_subscriber/{requestor_Entity}/{requestor_Role}/": {
+      "put": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "update a subscriber",
+        "description": "update a particular subscriber details",
+        "operationId": "updateSubscribers",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriber_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/subscriberconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid subscriber_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "subscriber_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/get_subscriber_details/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "get details of a subscriber",
+        "operationId": "getSubscriberDetails",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriber_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "subscriber_details",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/subscriberdetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/subscriberconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid subscriber_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "subscriber_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/get_subscriber_list/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "list of subscribers",
+        "operationId": "subscriberList",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "subscriber_filter",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/subscriberfilter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "subscriberinfo": {
+                "schema": {
+                  "$ref": "#/components/schemas/subscriber_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid entityId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "entityId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/allocate_subscriber/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "allocate session subscribers",
+        "operationId": "allocateSubscriber",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriberId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid subscriberId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to allocate"
+          },
+          "404": {
+            "description": "subscriberId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/deallocate_subscriber/{requestor_Entity}/{requestor_Role}/": {
+      "delete": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "deallocate session subscriber",
+        "operationId": "deallocateSubscriber",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriberId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid subscriberId/sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to deallocate"
+          },
+          "404": {
+            "description": "subscriberId/sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/subscribers/get_session_subscribers/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "subscribers"
+        ],
+        "summary": "list of session subscribers",
+        "operationId": "sessionsubscribers",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "sessionId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "subscriber_details",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/subscriberdetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/subscriber_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid sessionId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "sessionId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/status/show_Status{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "status"
+        ],
+        "summary": "show status of specified Session(s)",
+        "operationId": "showstatus",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Alert/Event/Episode/Session/resource /subscriber,Id"
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/status_list"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to get information"
+          },
+          "404": {
+            "description": "category or Id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/get_log_report/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "get_log_report"
+        ],
+        "summary": "Publish chronological transaction report as chosen by filter",
+        "operationId": "getLogReporting",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "category",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            },
+            "example": "Alert/Event/Episode/Session/resource /subscriber"
+          },
+          {
+            "name": "Id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "logdetails",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/log_details"
+            }
+          },
+          {
+            "name": "logfilter",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/log_filter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Publish specific types of reports from logs",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/log_report"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid filter type supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "report not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/create_entity/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "create new entity.",
+        "description": "create a new entity",
+        "operationId": "createEntity",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/entityconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "description": "ID of created entity",
+                  "example": "4524453535"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "requestor doesnot have permission to create a new entity"
+          },
+          "405": {
+            "description": "Invalid input"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/update_entity/{requestor_Entity}/{requestor_Role}/": {
+      "put": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "update entity",
+        "description": "update particular entity",
+        "operationId": "updateentity",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entity_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "json": {
+              "schema": {
+                "$ref": "#/components/schemas/entityconfig"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid entity_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to update"
+          },
+          "404": {
+            "description": "entity_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/get_entity_details/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "get details of an entity",
+        "operationId": "getDetailsEntity",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entity_id",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "entity_details",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/entitydetails"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/entityconfig"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid entity_id supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "entity_id not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/get_entity_list/{requestor_Entity}/{requestor_Role}/": {
+      "get": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "list of entity",
+        "operationId": "entityList",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "integer"
+            }
+          },
+          {
+            "name": "entity_filter",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "$ref": "#/components/schemas/entityfilter"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success",
+            "content": {
+              "json": {
+                "schema": {
+                  "$ref": "#/components/schemas/entity_info"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid entityId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to access the information"
+          },
+          "404": {
+            "description": "entityId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/affiliate_entity/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "affiliate entity to alert/subscriber/session/resource",
+        "operationId": "affiliateEntity",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetcategory",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "alert/subscriber/session/resource"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid entityId/targetId supplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to affiliate"
+          },
+          "404": {
+            "description": "entityId/targetId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    },
+    "/entity/deaffiliate_entity/{requestor_Entity}/{requestor_Role}/": {
+      "post": {
+        "tags": [
+          "entity"
+        ],
+        "summary": "deaffiliate entity to alert/subscriber/session/resource",
+        "operationId": "deaffiliateEntity",
+        "parameters": [
+          {
+            "name": "requestor_Entity",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "requestor_Role",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "explode": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "entityId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetId",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "targetcategory",
+            "in": "query",
+            "required": false,
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "string",
+              "example": "alert/subscriber/session/resource"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "success"
+          },
+          "400": {
+            "description": "Invalid entityId/targetIdsupplied"
+          },
+          "403": {
+            "description": "requestor doesnot have permission to deaffiliate"
+          },
+          "404": {
+            "description": "entityId/targetId not found"
+          },
+          "default": {
+            "description": "Unexpected error"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "subscriberconfig": {
+        "type": "object",
+        "properties": {
+          "subscriber_category": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone_no": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string"
+          },
+          "alerturl": {
+            "type": "string"
+          },
+          "alertMode": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      },
+      "subscriberdetails": {
+        "type": "object",
+        "properties": {
+          "subscriber_id": {
+            "type": "boolean"
+          },
+          "subscriber_category": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "boolean"
+          },
+          "phone_no": {
+            "type": "boolean"
+          },
+          "email_id": {
+            "type": "boolean"
+          },
+          "alerturl": {
+            "type": "boolean"
+          },
+          "alertMode": {
+            "type": "boolean"
+          },
+          "entityId": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "boolean"
+          }
+        }
+      },
+      "subscriberfilter": {
+        "type": "object",
+        "properties": {
+          "subscriber_id": {
+            "type": "string"
+          },
+          "subscriber_category": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone_no": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string"
+          },
+          "alertMode": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      },
+      "subscriber_info": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/subscriber_info_inner"
+        }
+      },
+      "resourceconfig": {
+        "type": "object",
+        "properties": {
+          "resource_category": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "phone_no": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string"
+          },
+          "alert_url": {
+            "type": "string"
+          },
+          "alertMode": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          }
+        }
+      },
+      "resourcedetails": {
+        "type": "object",
+        "properties": {
+          "resource_id": {
+            "type": "boolean"
+          },
+          "resource_category": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "boolean"
+          },
+          "phone_no": {
+            "type": "boolean"
+          },
+          "email_id": {
+            "type": "boolean"
+          },
+          "alert_url": {
+            "type": "boolean"
+          },
+          "alertMode": {
+            "type": "boolean"
+          },
+          "entityId": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "boolean"
+          }
+        }
+      },
+      "resourcefilter": {
+        "type": "object",
+        "properties": {
+          "resource_id": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "resource_category": {
+            "type": "string"
+          },
+          "alertMode": {
+            "type": "string"
+          }
+        }
+      },
+      "resource_info": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/subscriber_info_inner"
+        }
+      },
+      "sessionconfig": {
+        "type": "object",
+        "properties": {
+          "personnel_name": {
+            "type": "string"
+          },
+          "episode_name": {
+            "type": "string"
+          },
+          "event_name": {
+            "type": "string"
+          },
+          "resource_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "subscriber_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "activity": {
+            "type": "string"
+          },
+          "session_name": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "startTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "endTime": {
+            "type": "string",
+            "format": "time"
+          },
+          "hostentityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "subscriber_limit": {
+            "type": "string",
+            "format": "integer"
+          },
+          "session_charges": {
+            "type": "string",
+            "format": "integer"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "terms_conditions": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          }
+        }
+      },
+      "sessiondetails": {
+        "type": "object",
+        "properties": {
+          "personnel_name": {
+            "type": "boolean"
+          },
+          "episode_name": {
+            "type": "boolean"
+          },
+          "session_id": {
+            "type": "boolean"
+          },
+          "resource_ids": {
+            "type": "boolean"
+          },
+          "subscriber_ids": {
+            "type": "boolean"
+          },
+          "activity": {
+            "type": "boolean"
+          },
+          "session_name": {
+            "type": "boolean"
+          },
+          "startDate": {
+            "type": "boolean",
+            "format": "date"
+          },
+          "endDate": {
+            "type": "boolean",
+            "format": "date"
+          },
+          "startTime": {
+            "type": "boolean",
+            "format": "time"
+          },
+          "endTime": {
+            "type": "boolean",
+            "format": "time"
+          },
+          "hostentityId": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "boolean"
+          },
+          "subscriber_limit": {
+            "type": "boolean"
+          },
+          "session_charges": {
+            "type": "boolean"
+          },
+          "currency": {
+            "type": "boolean"
+          },
+          "terms_conditions": {
+            "type": "boolean"
+          },
+          "instructions": {
+            "type": "boolean"
+          }
+        }
+      },
+      "sessionfilter": {
+        "type": "object",
+        "properties": {
+          "episode_name": {
+            "type": "string"
+          },
+          "event_name": {
+            "type": "string"
+          },
+          "resource_ids": {
+            "type": "string"
+          },
+          "subscriber_ids": {
+            "type": "string"
+          },
+          "activity": {
+            "type": "string"
+          },
+          "hostentityId": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "period": {
+            "$ref": "#/components/schemas/date-range"
+          },
+          "subscriber_limit": {
+            "type": "string",
+            "format": "integer"
+          },
+          "session_charges": {
+            "type": "string",
+            "format": "integer"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "terms_conditions": {
+            "type": "string"
+          },
+          "instructions": {
+            "type": "string"
+          }
+        }
+      },
+      "session_info": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/session_info_inner"
+        }
+      },
+      "date-range": {
+        "type": "object",
+        "properties": {
+          "startdatetime": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "enddatetime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "alertconfig": {
+        "type": "object",
+        "properties": {
+          "alertId": {
+            "type": "string"
+          },
+          "alertcategory": {
+            "type": "string"
+          },
+          "alertMessage": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "resource_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subscriber_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "alertdetails": {
+        "type": "object",
+        "properties": {
+          "alertId": {
+            "type": "boolean"
+          },
+          "entityId": {
+            "type": "boolean"
+          },
+          "alertMessage": {
+            "type": "boolean"
+          },
+          "alertcategory": {
+            "type": "boolean"
+          },
+          "resource_ids": {
+            "type": "boolean"
+          },
+          "subscriber_ids": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        }
+      },
+      "alertfilter": {
+        "type": "object",
+        "properties": {
+          "entityId": {
+            "type": "string"
+          },
+          "epoch": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "resource_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subscriber_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "status": {
+            "type": "string"
+          },
+          "alertcategory": {
+            "type": "string"
+          }
+        }
+      },
+      "alert_info": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/alert_info_inner"
+        }
+      },
+      "slots": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/slots_inner"
+        }
+      },
+      "entityconfig": {
+        "type": "object",
+        "properties": {
+          "entityname": {
+            "type": "string"
+          },
+          "phone_no": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "entitycategory": {
+            "type": "string"
+          }
+        }
+      },
+      "entitydetails": {
+        "type": "object",
+        "properties": {
+          "entityId": {
+            "type": "boolean"
+          },
+          "entityname": {
+            "type": "boolean"
+          },
+          "phone_no": {
+            "type": "boolean"
+          },
+          "email_id": {
+            "type": "boolean"
+          },
+          "url": {
+            "type": "boolean"
+          },
+          "location": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "boolean"
+          }
+        }
+      },
+      "entityfilter": {
+        "type": "object",
+        "properties": {
+          "entityId": {
+            "type": "string"
+          },
+          "entityname": {
+            "type": "string"
+          },
+          "phone_no": {
+            "type": "string"
+          },
+          "email_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "entity_info": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/entity_info_inner"
+        }
+      },
+      "status_list": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/status_list_inner"
+        }
+      },
+      "log_report": {
+        "type": "object",
+        "properties": {
+          "logId": {
+            "type": "string"
+          },
+          "logcategory": {
+            "type": "string",
+            "example": "alert/subscriber/resource/worklist/BBconfig/event/report"
+          },
+          "logcontent": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "date-time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "log_details": {
+        "type": "object",
+        "properties": {
+          "logId": {
+            "type": "boolean"
+          },
+          "logcategory": {
+            "type": "boolean",
+            "example": false
+          },
+          "logcontent": {
+            "type": "boolean"
+          },
+          "entityId": {
+            "type": "boolean"
+          },
+          "date-time": {
+            "type": "boolean",
+            "format": "date-time"
+          }
+        }
+      },
+      "log_filter": {
+        "type": "object",
+        "properties": {
+          "logId": {
+            "type": "string"
+          },
+          "period": {
+            "$ref": "#/components/schemas/date-range"
+          },
+          "entityId": {
+            "type": "string"
+          },
+          "logcategory": {
+            "type": "string",
+            "example": "alert/subscriber/resource/worklist/BBconfig/event/report"
+          }
+        }
+      },
+      "inline_response_200": {
+        "type": "object",
+        "properties": {
+          "sessionstatus": {
+            "type": "string"
+          }
+        }
+      },
+      "inline_response_200_1": {
+        "type": "object",
+        "properties": {
+          "sessiontoken": {
+            "type": "string"
+          }
+        }
+      },
+      "subscriber_info_inner": {
+        "type": "object",
+        "properties": {
+          "subscriber_id": {
+            "type": "string"
+          },
+          "subscriber_name": {
+            "type": "string"
+          }
+        }
+      },
+      "session_info_inner": {
+        "type": "object",
+        "properties": {
+          "session_id": {
+            "type": "string"
+          },
+          "session_name": {
+            "type": "string"
+          }
+        }
+      },
+      "alert_info_inner": {
+        "type": "object",
+        "properties": {
+          "alert_id": {
+            "type": "string"
+          },
+          "alert_name": {
+            "type": "string"
+          }
+        }
+      },
+      "slots_inner": {
+        "type": "object",
+        "properties": {
+          "from": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-02-15T00:00:00Z"
+          },
+          "to": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2018-02-15T00:00:00Z"
+          }
+        }
+      },
+      "entity_info_inner": {
+        "type": "object",
+        "properties": {
+          "entity_id": {
+            "type": "string"
+          },
+          "entity_name": {
+            "type": "string"
+          }
+        }
+      },
+      "status_list_inner": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
