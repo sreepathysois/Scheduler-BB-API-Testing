@@ -6,3 +6,5 @@ pytest-bdd
 requests
 #selenium
 #webdriver_manager
+pytest-json-report
+pytest-html
