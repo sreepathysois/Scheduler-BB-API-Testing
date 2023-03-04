@@ -1,0 +1,2893 @@
+{
+    "created": 1677926576.8186452,
+    "duration": 1.1772871017456055,
+    "exitcode": 1,
+    "root": "/test/step_defs",
+    "environment": {
+        "Python": "3.8.15",
+        "Platform": "Linux-5.15.0-56-generic-x86_64-with-glibc2.2.5",
+        "Packages": {
+            "pytest": "7.2.0",
+            "pluggy": "1.0.0"
+        },
+        "Plugins": {
+            "metadata": "2.0.4",
+            "json-report": "1.5.0",
+            "anyio": "3.6.2",
+            "bdd": "6.1.1"
+        }
+    },
+    "summary": {
+        "passed": 30,
+        "failed": 10,
+        "total": 40,
+        "collected": 212,
+        "deselected": 172
+    },
+    "collectors": [
+        {
+            "nodeid": "",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_affiliate_entity.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_allocate_alert.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_allocate_resources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_allocate_subscriber.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_cancel_session.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_create_alert.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_create_entity.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_create_session.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_create_subscribers.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_createresources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_deaffiliate_entity.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_deallocate_alert.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_deallocate_resources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_deallocate_subscriber.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_alert_details.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_entity_details.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_entity_list.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_list_session_resources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_list_session_subscribers.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_session_alert_details.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_session_details.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_subscribers_details.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_getresourcelist.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_getresourcesdetails.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_getsessiondetails.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_request_session_status.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_send_session_alerts.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_sessioncreate.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_update_alert.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_update_entity.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_update_session.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_update_session_status.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_update_subscribers.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_updateresources.py",
+                    "type": "Module"
+                },
+                {
+                    "nodeid": "test_updatesession.py",
+                    "type": "Module"
+                }
+            ]
+        },
+        {
+            "nodeid": "test_affiliate_entity.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535-hosp]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-hsop-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-education-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-academics-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_allocate_alert.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4523353535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4523353535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_allocate_resources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_allocate_subscriber.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_cancel_session.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_cancel_session.py::test_cancel_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_cancel_session.py::test_cancel_a_session_to_a_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_cancel_session.py::test_cancel_a_session_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_cancel_session.py::test_cancel_a_session_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_cancel_session.py::test_cancel_a_session_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_create_alert.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-health-resource threshold-he2-bed,icu-mahe-6724453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-health-resource threshold-he2-bed,icu-mahe-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-health-resource threshold-he2-bed,icu-mahe-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-health-resource threshold-he2-bed,icu-mahe-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_create_entity.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-practo-9980555504-sree@gmail.com-http://alert.com-Bangalore-hsopital-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-practo-9980555504-sree@gmail.com-http://alert.com-Bangalore-hsopital-4423455-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-practo-9980555504-sree@gmail.com-http://alert.com-Bangalore-hsopital-4423455-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-practo-9980555504-sree@gmail.com-http://alert.com-Bangalore-hsopital-4423455-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_create_session.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-admin-consultation-2023-02-04-08:44:44.683Z-2023-03-04-09:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-admin-consultation-2023-02-04-08:44:44.683Z-2023-03-04-09:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-admin-consultation-2023-02-04-08:44:44.683Z-2023-03-04-09:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_create_subscribers.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_createresources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-4524453535-405]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_deaffiliate_entity.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535-hosp]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-hsop-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-education-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-academics-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_deallocate_alert.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_deallocate_resources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_deallocate_subscriber.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-test-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_findfreeresourcesapi.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids[practo-admin-Hosp1-true-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids[practo-admin-Hosp1-false-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids[practo-admin-Hosp2-true-bed-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids[practo-healthworker-Hosp3-true-icu-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_with_negative_inputs[healthngo1-admin-Hosp1-true-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_with_negative_inputs[healthngo1-healthworker-Hosp1-true-lawyer-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_with_negative_inputs[healthngo1-healthworker-Hosp1-true-bed-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_with_negative_inputs[healthngo1-healthworker-Hosp3-true-ambulance-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_findfreeresourceslotsapi.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids[healthngo1-healthworker-Doctor-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids[healthngo2-healthworker-Nurse-false-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids[healthngo3-healthworker-ICU-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids[healthngo4-healthworker-Lab-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_alert_details.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_alert_details.py::test_get_alert_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_alert_details.py::test_get_alert_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-4524453535-resources-health-icu,bed-Mahe]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_alert_details.py::test_get_alert_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-myresource-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_alert_details.py::test_get_alert_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_alert_details.py::test_get_alert_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_entity_details.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_entity_details.py::test_get_entity_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_entity_details.py::test_get_entity_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-mahe-9980555504-sree@gmail.com-http://alert.com-Mangalore-hspital]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_details.py::test_get_entity_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-myresource-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_details.py::test_get_entity_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_details.py::test_get_entity_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_entity_list.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-4524453535-mahe]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_find_free_resource_slots.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-admin-Doctor-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for__scheduler_api_unit_and_regression_happy_testing[healthngo2-healthworker-Lawyer-false-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for__scheduler_api_unit_and_regression_happy_testing[healthngo3-healthworker-ICU-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for__scheduler_api_unit_and_regression_happy_testing[healthngo4-healthworker-Lab-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-Doctor-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_unit_and_regression_negative_testing[healthngo2-healthworker-Nurse-false-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-402]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_unit_and_regression_negative_testing[healthngo3-healthworker-ICU-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_unit_and_regression_negative_testing[healthngo4-healthworker-Lab-true-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_find_free_resources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-Hosp1-true-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo2-healthworker-Hosp1-false-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo3-healthworker-Hosp2-true-bed-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo4-healthworker-Hosp3-true-icu-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-admin-Hosp1-true-doctor-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-Hosp1-true-lawyer-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-402]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-Hosp1-true-bed-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-Hosp3-true-ambulance-2023-02-04T08:44:44.683Z-2023-02-04T08:44:44.683Z-2018-02-15T00:00:00Z-2018-02-15T00:00:00Z-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_list_session_resources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-test-test]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_list_session_subscribers.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-he1-test-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-test]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-he1-4524453535-bed-sree-99805555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_session_alert_details.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-4524453535-resourcecrunch-health-bed,icu-mahe-45678-mytrigger]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-resourcecrunch-health-bed,icu-mahe-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-resourcecrunch-health-bed,icu-mahe-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-resourcecrunch-health-bed,icu-mahe-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_session_details.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_session_details.py::test_get_session_details_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_session_details.py::test_get_session_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-sree-ep1-itu-83295-38291-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-test-he1-10-1-usd-no refund-get records]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_details.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_details.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_session_details.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_subscribers_details.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-myresource-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_get_subscribers_list.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscribers_list_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscribers_list_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-test-he1-bed-urgent-he1-test]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscriberss_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-he1-bed-urgent-bangalore-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscriberss_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535h-he1-bed-urgent-mysore-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscriberss_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-he2-bed-urgent-mysore-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_get_subscribers_list.py::test_get_subscriberss_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-he2-bed-urgent-bangalore-405]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_getresourcelist.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-344-4524453535-bed-urgent-he1-test-test]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-333-4524453535-bed-urgent-he1-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-333-4524453535-bed-urgent-he1-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-333-4524453535-bed-urgent-he1-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-333-4524453535-bed-urgent-he1-405]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_getresourcesdetails.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-myresource-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_getsessiondetails.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_getsessiondetails.py::test_get_session_details_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_getsessiondetails.py::test_get_session_details_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-sree-ep1-itu-83295-38291-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-test-he1-10-1-usd-no refund-get records]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getsessiondetails.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getsessiondetails.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_getsessiondetails.py::test_get_session_details_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_request_session_status.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_request_session_status.py::test_request_session_status_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-target_BB_Id-sucess]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_request_session_status.py::test_request_session_status_for__scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-target_BB_Id-sucess]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_request_session_status.py::test_request_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-target_BB_Id-sucess-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_request_session_status.py::test_request_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-target_BB_Id-sucess-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_request_session_status.py::test_request_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-target_BB_Id-sucess-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_send_session_alerts.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-4524453535-4524453535]",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-4524453535-4524453535]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-4524453535-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-4524453535-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-4524453535-4524453535-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_sessioncreate.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_sessioncreate.py::test_create_session_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_sessioncreate.py::test_create_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_sessioncreate.py::test_create_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-admin-consultation-2023-02-04-08:44:44.683Z-2023-03-04-09:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-4524458935]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_update_alert.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-health-resource threshold-he2-bed,icu-mahe]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-health-resource threshold-he2-bed,icu-mahe-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-health-resource threshold-he2-bed,icu-mahe-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-health-resource threshold-he2-bed,icu-mahe-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_update_entity.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-sreepathy-9980555504-sree@gmail.com-http://entity.com-Bangalore-hospital-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_update_session.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_update_session_status.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-source_BB_Id-4524453535-success]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-source_BB_Id-4524453535-success-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-source_BB_Id-4524453535-success-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-source_BB_Id-4524453535-success-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_update_subscribers.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_updateresources.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-bed-sreepathy-9980555504-sree@gmail.com-http://alert.com-urgent-he1-Bangalore-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        },
+        {
+            "nodeid": "test_updatesession.py",
+            "outcome": "passed",
+            "result": [
+                {
+                    "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_smoke_test",
+                    "type": "Function",
+                    "lineno": 216
+                },
+                {
+                    "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_unit_and_regression_happy_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-400]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-403]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                },
+                {
+                    "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_unit_and_regression_negative_testing[healthngo1-healthworker-4524453535-consultation-active-2023-02-04-08:44:44.683Z-2023-02-04-08:44:44.683Z-pysio-he1-10-1-usd-no refund-get records-404]",
+                    "type": "Function",
+                    "lineno": 216,
+                    "deselected": true
+                }
+            ]
+        }
+    ],
+    "tests": [
+        {
+            "nodeid": "test_affiliate_entity.py::test_affiliate_an_entity_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_affiliate_an_entity_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_affiliate_entity.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00034484732896089554,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.10381342936307192,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00021411944180727005,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_allocate_alert.py::test_allocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4523353535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_allocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4523353535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4523353535",
+                "test_allocate_alert.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00024668872356414795,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01046451460570097,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019518844783306122,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_allocate_resources.py::test_allocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_allocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4524453535",
+                "test_allocate_resources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00023719854652881622,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01045105792582035,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019988510757684708,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_allocate_subscriber.py::test_allocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_allocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4524453535",
+                "test_allocate_subscriber.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0002384670078754425,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.010687985457479954,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020643603056669235,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_cancel_session.py::test_cancel_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_cancel_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535",
+                "test_cancel_session.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00024661608040332794,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01131873857229948,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020758062601089478,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_create_alert.py::test_create_a_new_alert_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_a_new_alert_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_create_alert.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.000212901271879673,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01152075920253992,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002054702490568161,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_create_entity.py::test_create_a_new_entity_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_a_new_entity_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_create_entity.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00022595562040805817,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.011969126760959625,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020192191004753113,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_create_session.py::test_create_a_new_session_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_a_new_session_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_create_session.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0002085380256175995,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012780592776834965,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00022498983889818192,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_create_subscribers.py::test_create_a_new_subscriber_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_a_new_subscriber_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_create_subscribers.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00022801198065280914,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.017347662709653378,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020394008606672287,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_createresources.py::test_create_resources_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_resources_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_createresources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.000211239792406559,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.011325201019644737,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002017635852098465,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_deaffiliate_entity.py::test_deaffiliate_an_entity_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_deaffiliate_an_entity_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_deaffiliate_entity.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00022192206233739853,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.013187302276492119,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002862773835659027,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_deallocate_alert.py::test_deallocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_deallocate_an_alert_to_a_session_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4524453535",
+                "test_deallocate_alert.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00036166422069072723,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.014541148208081722,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019517075270414352,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_deallocate_resources.py::test_deallocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_deallocate_a_resource_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4524453535",
+                "test_deallocate_resources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00023715663701295853,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.013353169895708561,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019953027367591858,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_deallocate_subscriber.py::test_deallocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_deallocate_a_subscriber_for_scheduler_api_smoke_test[healthngo1-healthworker-test-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-test-4524453535",
+                "test_deallocate_subscriber.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0002395501360297203,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012506348080933094,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019728019833564758,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_findfreeresourcesapi.py::test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_findfreeresourcesapi.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00021374784409999847,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.014913159422576427,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020281970500946045,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_findfreeresourceslotsapi.py::test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_find_free_resources_slots_for_given_resource_ids_smoke_type_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_findfreeresourceslotsapi.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00021860003471374512,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.013249588198959827,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020935945212841034,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_alert_details.py::test_get_alert_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_get_alert_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535",
+                "test_get_alert_details.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00024167634546756744,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012094964273273945,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020015239715576172,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_entity_details.py::test_get_entity_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_entity_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535",
+                "test_get_entity_details.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00024376250803470612,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.014832624234259129,
+                "outcome": "failed",
+                "longrepr": "file /usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py, line 217\n          @pytest.mark.usefixtures(*func_args)\n          def scenario_wrapper(request: FixtureRequest, _pytest_bdd_example: dict[str, str]) -> Any:\nfile /test/step_defs/test_get_entity_details.py, line 19\n  @pytest.fixture\n\n\n  @given(parsers.parse('the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for an entity_id \"{entity_id} for smoke testing\"'), target_fixture = 'smoke_get_request')\n  def smoke_get_request(requestor_Entity, requestor_Role, entity_id):\nE       fixture 'requestor_Entity' not found\n>       available fixtures: _pytest_bdd_example, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, get_request, include_metadata_in_junit_xml, json_metadata, metadata, monkeypatch, pytestbdd_stepdef_given_the invalid inputs for the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for an entity_id \"{entity_id}\", pytestbdd_stepdef_given_the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for an entity_id \"{entity_id} for smoke testing\", pytestbdd_stepdef_given_the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for an entity_id \"{entity_id}\", pytestbdd_stepdef_given_trace, pytestbdd_stepdef_then_response code of GET request is \"{code:d}\", pytestbdd_stepdef_then_response code of GET request is \"{code:d}\" for smoke testing, pytestbdd_stepdef_then_response code of negative testing GET request for invalid data is \"{status_code}\", pytestbdd_stepdef_then_the result should return following details of entity with its name \"{entityname}\" and with following details like \"{phone_no}\" \"{email_id}\" with home page url \"{url}\" for a specified \"{location}\" with its category as \"{entitycategory}\", pytestbdd_stepdef_then_trace, pytestbdd_stepdef_when_a GET request for an endpoint /entity/get_entity_details/ is triggered to get details of an entity, pytestbdd_stepdef_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, smoke_get_request, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory, unit_get_request\n>       use 'pytest --fixtures [testpath]' for help on them.\n\n/test/step_defs/test_get_entity_details.py:19"
+            },
+            "teardown": {
+                "duration": 0.00023043528199195862,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_entity_list.py::test_get_list_of_entity_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_list_of_entity_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535",
+                "test_get_entity_list.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0002534119412302971,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.001522657461464405,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/test/step_defs/test_get_entity_list.py",
+                    "lineno": 25,
+                    "message": "NameError: name 'entity_id' is not defined"
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py",
+                        "lineno": 907,
+                        "message": ""
+                    },
+                    {
+                        "path": "test_get_entity_list.py",
+                        "lineno": 25,
+                        "message": "NameError"
+                    }
+                ],
+                "longrepr": "fixturefunc = <function smoke_get_request at 0x7efd82e4dd30>, request = <FixtureRequest for <Function test_get_list_of_entity_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]>>\nkwargs = {'entityId': '4524453535', 'requestor_Entity': 'healthngo1', 'requestor_Role': 'healthworker'}\n\n    def call_fixture_func(\n        fixturefunc: \"_FixtureFunc[FixtureValue]\", request: FixtureRequest, kwargs\n    ) -> FixtureValue:\n        if is_generator(fixturefunc):\n            fixturefunc = cast(\n                Callable[..., Generator[FixtureValue, None, None]], fixturefunc\n            )\n            generator = fixturefunc(**kwargs)\n            try:\n                fixture_result = next(generator)\n            except StopIteration:\n                raise ValueError(f\"{request.fixturename} did not yield a value\") from None\n            finalizer = functools.partial(_teardown_yield_fixture, fixturefunc, generator)\n            request.addfinalizer(finalizer)\n        else:\n            fixturefunc = cast(Callable[..., FixtureValue], fixturefunc)\n>           fixture_result = fixturefunc(**kwargs)\n\n/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py:907: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nrequestor_Entity = 'healthngo1', requestor_Role = 'healthworker', entityId = '4524453535'\n\n    @pytest.fixture\n    \n    \n    #@given(parsers.parse('the requestor entity is \"{healthngo1}\" with role as \"{healthworker}\" for an entity_id \"{entity_id:d}\"'), target_fixture = 'smoke_get_request')\n    @given(parsers.parse('the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for an entity with Id as \"{entityId}\"'),target_fixture = 'smoke_get_request')\n    def smoke_get_request(requestor_Entity, requestor_Role, entityId ):\n>       params = {'requestor_Entity': requestor_Entity, 'requestor_Role': requestor_Role,'entity_id': entity_id}\nE       NameError: name 'entity_id' is not defined\n\ntest_get_entity_list.py:25: NameError"
+            },
+            "teardown": {
+                "duration": 0.00018750596791505814,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_find_free_resource_slots.py::test_getfind_free_resource_slots_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_getfind_free_resource_slots_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_get_find_free_resource_slots.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00021711457520723343,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.009698683395981789,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00027706101536750793,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_find_free_resources.py::test_getfind_free_resources_details_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_getfind_free_resources_details_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_get_find_free_resources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00022986065596342087,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.010352641344070435,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024478696286678314,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_list_session_resources.py::test_get_list_of_session_resources_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_list_of_session_resources_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_get_list_session_resources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00029212143272161484,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0074865687638521194,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                    "lineno": 975,
+                    "message": "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py",
+                        "lineno": 907,
+                        "message": ""
+                    },
+                    {
+                        "path": "test_get_list_session_resources.py",
+                        "lineno": 27,
+                        "message": "in smoke_get_request"
+                    },
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                        "lineno": 975,
+                        "message": "JSONDecodeError"
+                    }
+                ],
+                "longrepr": "self = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ns = 'Error while serving the content: invalid media type', cls = None, object_hook = None, parse_float = None, parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}\n\n    def loads(s, *, cls=None, object_hook=None, parse_float=None,\n            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):\n        \"\"\"Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance\n        containing a JSON document) to a Python object.\n    \n        ``object_hook`` is an optional function that will be called with the\n        result of any object literal decode (a ``dict``). The return value of\n        ``object_hook`` will be used instead of the ``dict``. This feature\n        can be used to implement custom decoders (e.g. JSON-RPC class hinting).\n    \n        ``object_pairs_hook`` is an optional function that will be called with the\n        result of any object literal decoded with an ordered list of pairs.  The\n        return value of ``object_pairs_hook`` will be used instead of the ``dict``.\n        This feature can be used to implement custom decoders.  If ``object_hook``\n        is also defined, the ``object_pairs_hook`` takes priority.\n    \n        ``parse_float``, if specified, will be called with the string\n        of every JSON float to be decoded. By default this is equivalent to\n        float(num_str). This can be used to use another datatype or parser\n        for JSON floats (e.g. decimal.Decimal).\n    \n        ``parse_int``, if specified, will be called with the string\n        of every JSON int to be decoded. By default this is equivalent to\n        int(num_str). This can be used to use another datatype or parser\n        for JSON integers (e.g. float).\n    \n        ``parse_constant``, if specified, will be called with one of the\n        following strings: -Infinity, Infinity, NaN.\n        This can be used to raise an exception if invalid JSON numbers\n        are encountered.\n    \n        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``\n        kwarg; otherwise ``JSONDecoder`` is used.\n    \n        The ``encoding`` argument is ignored and deprecated since Python 3.1.\n        \"\"\"\n        if isinstance(s, str):\n            if s.startswith('\\ufeff'):\n                raise JSONDecodeError(\"Unexpected UTF-8 BOM (decode using utf-8-sig)\",\n                                      s, 0)\n        else:\n            if not isinstance(s, (bytes, bytearray)):\n                raise TypeError(f'the JSON object must be str, bytes or bytearray, '\n                                f'not {s.__class__.__name__}')\n            s = s.decode(detect_encoding(s), 'surrogatepass')\n    \n        if \"encoding\" in kw:\n            import warnings\n            warnings.warn(\n                \"'encoding' is ignored and deprecated. It will be removed in Python 3.9\",\n                DeprecationWarning,\n                stacklevel=2\n            )\n            del kw['encoding']\n    \n        if (cls is None and object_hook is None and\n                parse_int is None and parse_float is None and\n                parse_constant is None and object_pairs_hook is None and not kw):\n>           return _default_decoder.decode(s)\n\n/usr/local/lib/python3.8/json/__init__.py:357: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', _w = <built-in method match of re.Pattern object at 0x7efd84069db0>\n\n    def decode(self, s, _w=WHITESPACE.match):\n        \"\"\"Return the Python representation of ``s`` (a ``str`` instance\n        containing a JSON document).\n    \n        \"\"\"\n>       obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n\n/usr/local/lib/python3.8/json/decoder.py:337: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', idx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\nfixturefunc = <function smoke_get_request at 0x7efd82da89d0>, request = <FixtureRequest for <Function test_get_list_of_session_resources_for_scheduler_api_smoke_test>>\nkwargs = {'healthngo1': 'healthngo1', 'healthworker': 'healthworker', 'sessionId': 'sessionId'}\n\n    def call_fixture_func(\n        fixturefunc: \"_FixtureFunc[FixtureValue]\", request: FixtureRequest, kwargs\n    ) -> FixtureValue:\n        if is_generator(fixturefunc):\n            fixturefunc = cast(\n                Callable[..., Generator[FixtureValue, None, None]], fixturefunc\n            )\n            generator = fixturefunc(**kwargs)\n            try:\n                fixture_result = next(generator)\n            except StopIteration:\n                raise ValueError(f\"{request.fixturename} did not yield a value\") from None\n            finalizer = functools.partial(_teardown_yield_fixture, fixturefunc, generator)\n            request.addfinalizer(finalizer)\n        else:\n            fixturefunc = cast(Callable[..., FixtureValue], fixturefunc)\n>           fixture_result = fixturefunc(**kwargs)\n\n/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py:907: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntest_get_list_session_resources.py:27: in smoke_get_request\n    status_code = response.json()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:975: JSONDecodeError"
+            },
+            "teardown": {
+                "duration": 0.00020467955619096756,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_list_session_subscribers.py::test_get_list_of_session_subscribers_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_list_of_session_subscribers_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-he1",
+                "test_get_list_session_subscribers.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003579091280698776,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.009772475808858871,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                    "lineno": 975,
+                    "message": "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py",
+                        "lineno": 907,
+                        "message": ""
+                    },
+                    {
+                        "path": "test_get_list_session_subscribers.py",
+                        "lineno": 29,
+                        "message": "in smoke_get_request"
+                    },
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                        "lineno": 975,
+                        "message": "JSONDecodeError"
+                    }
+                ],
+                "longrepr": "self = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ns = 'Error while serving the content: invalid media type', cls = None, object_hook = None, parse_float = None, parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}\n\n    def loads(s, *, cls=None, object_hook=None, parse_float=None,\n            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):\n        \"\"\"Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance\n        containing a JSON document) to a Python object.\n    \n        ``object_hook`` is an optional function that will be called with the\n        result of any object literal decode (a ``dict``). The return value of\n        ``object_hook`` will be used instead of the ``dict``. This feature\n        can be used to implement custom decoders (e.g. JSON-RPC class hinting).\n    \n        ``object_pairs_hook`` is an optional function that will be called with the\n        result of any object literal decoded with an ordered list of pairs.  The\n        return value of ``object_pairs_hook`` will be used instead of the ``dict``.\n        This feature can be used to implement custom decoders.  If ``object_hook``\n        is also defined, the ``object_pairs_hook`` takes priority.\n    \n        ``parse_float``, if specified, will be called with the string\n        of every JSON float to be decoded. By default this is equivalent to\n        float(num_str). This can be used to use another datatype or parser\n        for JSON floats (e.g. decimal.Decimal).\n    \n        ``parse_int``, if specified, will be called with the string\n        of every JSON int to be decoded. By default this is equivalent to\n        int(num_str). This can be used to use another datatype or parser\n        for JSON integers (e.g. float).\n    \n        ``parse_constant``, if specified, will be called with one of the\n        following strings: -Infinity, Infinity, NaN.\n        This can be used to raise an exception if invalid JSON numbers\n        are encountered.\n    \n        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``\n        kwarg; otherwise ``JSONDecoder`` is used.\n    \n        The ``encoding`` argument is ignored and deprecated since Python 3.1.\n        \"\"\"\n        if isinstance(s, str):\n            if s.startswith('\\ufeff'):\n                raise JSONDecodeError(\"Unexpected UTF-8 BOM (decode using utf-8-sig)\",\n                                      s, 0)\n        else:\n            if not isinstance(s, (bytes, bytearray)):\n                raise TypeError(f'the JSON object must be str, bytes or bytearray, '\n                                f'not {s.__class__.__name__}')\n            s = s.decode(detect_encoding(s), 'surrogatepass')\n    \n        if \"encoding\" in kw:\n            import warnings\n            warnings.warn(\n                \"'encoding' is ignored and deprecated. It will be removed in Python 3.9\",\n                DeprecationWarning,\n                stacklevel=2\n            )\n            del kw['encoding']\n    \n        if (cls is None and object_hook is None and\n                parse_int is None and parse_float is None and\n                parse_constant is None and object_pairs_hook is None and not kw):\n>           return _default_decoder.decode(s)\n\n/usr/local/lib/python3.8/json/__init__.py:357: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', _w = <built-in method match of re.Pattern object at 0x7efd84069db0>\n\n    def decode(self, s, _w=WHITESPACE.match):\n        \"\"\"Return the Python representation of ``s`` (a ``str`` instance\n        containing a JSON document).\n    \n        \"\"\"\n>       obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n\n/usr/local/lib/python3.8/json/decoder.py:337: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', idx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\nfixturefunc = <function smoke_get_request at 0x7efd82dc3430>\nrequest = <FixtureRequest for <Function test_get_list_of_session_subscribers_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]>>\nkwargs = {'requestor_Entity': 'healthngo1', 'requestor_Role': 'healthworker', 'sessionId': 'he1'}\n\n    def call_fixture_func(\n        fixturefunc: \"_FixtureFunc[FixtureValue]\", request: FixtureRequest, kwargs\n    ) -> FixtureValue:\n        if is_generator(fixturefunc):\n            fixturefunc = cast(\n                Callable[..., Generator[FixtureValue, None, None]], fixturefunc\n            )\n            generator = fixturefunc(**kwargs)\n            try:\n                fixture_result = next(generator)\n            except StopIteration:\n                raise ValueError(f\"{request.fixturename} did not yield a value\") from None\n            finalizer = functools.partial(_teardown_yield_fixture, fixturefunc, generator)\n            request.addfinalizer(finalizer)\n        else:\n            fixturefunc = cast(Callable[..., FixtureValue], fixturefunc)\n>           fixture_result = fixturefunc(**kwargs)\n\n/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py:907: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntest_get_list_session_subscribers.py:29: in smoke_get_request\n    status_code = response.json()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:975: JSONDecodeError"
+            },
+            "teardown": {
+                "duration": 0.00024192128330469131,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_session_alert_details.py::test_get_list_of_session_alerts_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_list_of_session_alerts_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_get_session_alert_details.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00034768320620059967,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0018497230485081673,
+                "outcome": "failed",
+                "longrepr": "file /usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py, line 217\n          @pytest.mark.usefixtures(*func_args)\n          def scenario_wrapper(request: FixtureRequest, _pytest_bdd_example: dict[str, str]) -> Any:\nE       fixture 'requestor_Entity' not found\n>       available fixtures: _pytest_bdd_example, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, include_metadata_in_junit_xml, json_metadata, metadata, monkeypatch, pytestbdd_stepdef_given_the invalid inputs for the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for a sesion with Id as \"{sessionId}\" for an alert filters like entityId \"{entityId}\" with message \"{alertMessage}\" category of alert \"{alertcategory}\" for given resources and subscriber ids \"{resource_ids}\" \"{subscriber_ids}\", pytestbdd_stepdef_given_the requestor entity is \"{healthngo1}\" with role as \"{healthworker}\" for a sesion with Id \"{sessionId:d}\", pytestbdd_stepdef_given_the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" for a sesion with Id as \"{sessionId}\" for an alert filters like entityId \"{entityId}\" with message \"{alertMessage}\" category of alert \"{alertcategory}\" for given resources and subscriber ids \"{resource_ids}\" \"{subscriber_ids}\", pytestbdd_stepdef_given_trace, pytestbdd_stepdef_then_response code of GET request is \"{code:d}\", pytestbdd_stepdef_then_response code of GET request is \"{code:d}\" for smoke testing, pytestbdd_stepdef_then_response code of negative testing GET request for invalid data is \"{status_code}\", pytestbdd_stepdef_then_the result should return alert details about \"{alert_id}\" and \"{alert_name}\", pytestbdd_stepdef_then_trace, pytestbdd_stepdef_when_a GET request for an endpoint /alert/get_session_alerts/ is triggered to get list of session alerts, pytestbdd_stepdef_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, smoke_get_request, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\n/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py:217"
+            },
+            "teardown": {
+                "duration": 0.00020883139222860336,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_session_details.py::test_get_session_details_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_get_session_details_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_get_session_details.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003311941400170326,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.020291454158723354,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024766381829977036,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_subscribers_details.py::test_get_subscriber_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_get_subscriber_details_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535",
+                "test_get_subscribers_details.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00039776042103767395,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01126452349126339,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024322513490915298,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_get_subscribers_list.py::test_get_subscribers_list_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_subscribers_list_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-he1",
+                "test_get_subscribers_list.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003379965201020241,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.007674808613955975,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                    "lineno": 975,
+                    "message": "requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)"
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py",
+                        "lineno": 907,
+                        "message": ""
+                    },
+                    {
+                        "path": "test_get_subscribers_list.py",
+                        "lineno": 27,
+                        "message": "in smoke_get_request"
+                    },
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/requests/models.py",
+                        "lineno": 975,
+                        "message": "JSONDecodeError"
+                    }
+                ],
+                "longrepr": "self = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n>           return complexjson.loads(self.text, **kwargs)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:971: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\ns = 'Error while serving the content: invalid media type', cls = None, object_hook = None, parse_float = None, parse_int = None, parse_constant = None, object_pairs_hook = None, kw = {}\n\n    def loads(s, *, cls=None, object_hook=None, parse_float=None,\n            parse_int=None, parse_constant=None, object_pairs_hook=None, **kw):\n        \"\"\"Deserialize ``s`` (a ``str``, ``bytes`` or ``bytearray`` instance\n        containing a JSON document) to a Python object.\n    \n        ``object_hook`` is an optional function that will be called with the\n        result of any object literal decode (a ``dict``). The return value of\n        ``object_hook`` will be used instead of the ``dict``. This feature\n        can be used to implement custom decoders (e.g. JSON-RPC class hinting).\n    \n        ``object_pairs_hook`` is an optional function that will be called with the\n        result of any object literal decoded with an ordered list of pairs.  The\n        return value of ``object_pairs_hook`` will be used instead of the ``dict``.\n        This feature can be used to implement custom decoders.  If ``object_hook``\n        is also defined, the ``object_pairs_hook`` takes priority.\n    \n        ``parse_float``, if specified, will be called with the string\n        of every JSON float to be decoded. By default this is equivalent to\n        float(num_str). This can be used to use another datatype or parser\n        for JSON floats (e.g. decimal.Decimal).\n    \n        ``parse_int``, if specified, will be called with the string\n        of every JSON int to be decoded. By default this is equivalent to\n        int(num_str). This can be used to use another datatype or parser\n        for JSON integers (e.g. float).\n    \n        ``parse_constant``, if specified, will be called with one of the\n        following strings: -Infinity, Infinity, NaN.\n        This can be used to raise an exception if invalid JSON numbers\n        are encountered.\n    \n        To use a custom ``JSONDecoder`` subclass, specify it with the ``cls``\n        kwarg; otherwise ``JSONDecoder`` is used.\n    \n        The ``encoding`` argument is ignored and deprecated since Python 3.1.\n        \"\"\"\n        if isinstance(s, str):\n            if s.startswith('\\ufeff'):\n                raise JSONDecodeError(\"Unexpected UTF-8 BOM (decode using utf-8-sig)\",\n                                      s, 0)\n        else:\n            if not isinstance(s, (bytes, bytearray)):\n                raise TypeError(f'the JSON object must be str, bytes or bytearray, '\n                                f'not {s.__class__.__name__}')\n            s = s.decode(detect_encoding(s), 'surrogatepass')\n    \n        if \"encoding\" in kw:\n            import warnings\n            warnings.warn(\n                \"'encoding' is ignored and deprecated. It will be removed in Python 3.9\",\n                DeprecationWarning,\n                stacklevel=2\n            )\n            del kw['encoding']\n    \n        if (cls is None and object_hook is None and\n                parse_int is None and parse_float is None and\n                parse_constant is None and object_pairs_hook is None and not kw):\n>           return _default_decoder.decode(s)\n\n/usr/local/lib/python3.8/json/__init__.py:357: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', _w = <built-in method match of re.Pattern object at 0x7efd84069db0>\n\n    def decode(self, s, _w=WHITESPACE.match):\n        \"\"\"Return the Python representation of ``s`` (a ``str`` instance\n        containing a JSON document).\n    \n        \"\"\"\n>       obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n\n/usr/local/lib/python3.8/json/decoder.py:337: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <json.decoder.JSONDecoder object at 0x7efd8468a7f0>, s = 'Error while serving the content: invalid media type', idx = 0\n\n    def raw_decode(self, s, idx=0):\n        \"\"\"Decode a JSON document from ``s`` (a ``str`` beginning with\n        a JSON document) and return a 2-tuple of the Python\n        representation and the index in ``s`` where the document ended.\n    \n        This can be used to decode a JSON document from a string that may\n        have extraneous data at the end.\n    \n        \"\"\"\n        try:\n            obj, end = self.scan_once(s, idx)\n        except StopIteration as err:\n>           raise JSONDecodeError(\"Expecting value\", s, err.value) from None\nE           json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/json/decoder.py:355: JSONDecodeError\n\nDuring handling of the above exception, another exception occurred:\n\nfixturefunc = <function smoke_get_request at 0x7efd82d1f3a0>, request = <FixtureRequest for <Function test_get_subscribers_list_for_scheduler_api_smoke_test[healthngo1-healthworker-he1]>>\nkwargs = {'entityId': 'he1', 'requestor_Entity': 'healthngo1', 'requestor_Role': 'healthworker'}\n\n    def call_fixture_func(\n        fixturefunc: \"_FixtureFunc[FixtureValue]\", request: FixtureRequest, kwargs\n    ) -> FixtureValue:\n        if is_generator(fixturefunc):\n            fixturefunc = cast(\n                Callable[..., Generator[FixtureValue, None, None]], fixturefunc\n            )\n            generator = fixturefunc(**kwargs)\n            try:\n                fixture_result = next(generator)\n            except StopIteration:\n                raise ValueError(f\"{request.fixturename} did not yield a value\") from None\n            finalizer = functools.partial(_teardown_yield_fixture, fixturefunc, generator)\n            request.addfinalizer(finalizer)\n        else:\n            fixturefunc = cast(Callable[..., FixtureValue], fixturefunc)\n>           fixture_result = fixturefunc(**kwargs)\n\n/usr/local/lib/python3.8/site-packages/_pytest/fixtures.py:907: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\ntest_get_subscribers_list.py:27: in smoke_get_request\n    status_code = response.json()\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <Response [200]>, kwargs = {}\n\n    def json(self, **kwargs):\n        r\"\"\"Returns the json-encoded content of a response, if any.\n    \n        :param \\*\\*kwargs: Optional arguments that ``json.loads`` takes.\n        :raises requests.exceptions.JSONDecodeError: If the response body does not\n            contain valid json.\n        \"\"\"\n    \n        if not self.encoding and self.content and len(self.content) > 3:\n            # No encoding set. JSON RFC 4627 section 3 states we should expect\n            # UTF-8, -16 or -32. Detect which one to use; If the detection or\n            # decoding fails, fall back to `self.text` (using charset_normalizer to make\n            # a best guess).\n            encoding = guess_json_utf(self.content)\n            if encoding is not None:\n                try:\n                    return complexjson.loads(self.content.decode(encoding), **kwargs)\n                except UnicodeDecodeError:\n                    # Wrong UTF codec detected; usually because it's not UTF-8\n                    # but some other 8-bit codec.  This is an RFC violation,\n                    # and the server didn't bother to tell us what codec *was*\n                    # used.\n                    pass\n                except JSONDecodeError as e:\n                    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\n    \n        try:\n            return complexjson.loads(self.text, **kwargs)\n        except JSONDecodeError as e:\n            # Catch JSON-related errors and raise as requests.JSONDecodeError\n            # This aliases json.JSONDecodeError and simplejson.JSONDecodeError\n>           raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)\nE           requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)\n\n/usr/local/lib/python3.8/site-packages/requests/models.py:975: JSONDecodeError"
+            },
+            "teardown": {
+                "duration": 0.00021236855536699295,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_getresourcelist.py::test_get_resources_list_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_resources_list_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_getresourcelist.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.000321757048368454,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0016524093225598335,
+                "outcome": "failed",
+                "longrepr": "file /usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py, line 217\n          @pytest.mark.usefixtures(*func_args)\n          def scenario_wrapper(request: FixtureRequest, _pytest_bdd_example: dict[str, str]) -> Any:\nE       fixture 'entityId' not found\n>       available fixtures: _pytest_bdd_example, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, include_metadata_in_junit_xml, json_metadata, metadata, monkeypatch, pytestbdd_stepdef_given_the invalid inputs for the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" having entityId \"{entityId}\" for resource_id \"{resource_id}\" of resource cateegory \"{resource_category}\" with alert mode \"{alertMode}\"  for a location is \"{location}\", pytestbdd_stepdef_given_the requestor entity is \"{healthngo1}\" with role as \"{healthworker}\" having entityId \"{he1}\", pytestbdd_stepdef_given_the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" having entityId \"{entityId}\" for resource_id \"{resource_id}\" of resource category \"{resource_category}\" with alert mode \"{alertMode}\"  for a location is \"{location}\", pytestbdd_stepdef_given_trace, pytestbdd_stepdef_then_response code of GET request is \"{code:d}\", pytestbdd_stepdef_then_response code of GET request is \"{code:d}\" for smoke testing, pytestbdd_stepdef_then_response code of negative testing GET request for invalid data is \"{status_code}\", pytestbdd_stepdef_then_the result should return subscriber details about \"{subscriber_id}\" and \"{subscriber_name}\", pytestbdd_stepdef_then_trace, pytestbdd_stepdef_when_a GET request for an endpoint /resource/get_resource_list/ is triggered to get list of resource, pytestbdd_stepdef_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, smoke_get_request, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\n/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py:217"
+            },
+            "teardown": {
+                "duration": 0.0001733815297484398,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_getresourcesdetails.py::test_get_resources_details_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_get_resources_details_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_getresourcesdetails.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003057597205042839,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.014737127348780632,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00023633521050214767,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_getsessiondetails.py::test_get_session_details_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_get_session_details_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_getsessiondetails.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00030501838773489,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0014779893681406975,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py",
+                    "lineno": 192,
+                    "message": "pytest_bdd.exceptions.StepDefinitionNotFoundError: Step definition is not found: Given \"the requestor entity is \"healthngo1\" with role as \"healthworker\" for a session_id \"4524453535\" for smoke testing\". Line 8 in scenario \"Get Session Details for Scheduler API Smoke Test\" in the feature \"/test/features/getsessiondetails.feature\""
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py",
+                        "lineno": 192,
+                        "message": "StepDefinitionNotFoundError"
+                    }
+                ],
+                "longrepr": "feature = Feature(scenarios=OrderedDict([('Get Session Details for Scheduler API Smoke Test', ScenarioTemplate(feature=..., name... API', tags=set(), background=None, line_number=1, description='Gherkin feature files for GovStack Scheduler services')\nscenario = Scenario(feature=Feature(scenarios=OrderedDict([('Get Session Details for Scheduler API Smoke Test', ScenarioTemplate(...g', line_number=10, indent=0, keyword='Then', failed=False, scenario=None, background=None, lines=[])], tags={'smoke'})\nrequest = <FixtureRequest for <Function test_get_session_details_for_scheduler_api_smoke_test>>\n\n    def _execute_scenario(feature: Feature, scenario: Scenario, request: FixtureRequest) -> None:\n        \"\"\"Execute the scenario.\n    \n        :param feature: Feature.\n        :param scenario: Scenario.\n        :param request: request.\n        :param encoding: Encoding.\n        \"\"\"\n        __tracebackhide__ = True\n        request.config.hook.pytest_bdd_before_scenario(request=request, feature=feature, scenario=scenario)\n    \n        try:\n            for step in scenario.steps:\n                step_func_context = get_step_function(request=request, step=step)\n                if step_func_context is None:\n                    exc = exceptions.StepDefinitionNotFoundError(\n                        f\"Step definition is not found: {step}. \"\n                        f'Line {step.line_number} in scenario \"{scenario.name}\" in the feature \"{scenario.feature.filename}\"'\n                    )\n                    request.config.hook.pytest_bdd_step_func_lookup_error(\n                        request=request, feature=feature, scenario=scenario, step=step, exception=exc\n                    )\n>                   raise exc\nE                   pytest_bdd.exceptions.StepDefinitionNotFoundError: Step definition is not found: Given \"the requestor entity is \"healthngo1\" with role as \"healthworker\" for a session_id \"4524453535\" for smoke testing\". Line 8 in scenario \"Get Session Details for Scheduler API Smoke Test\" in the feature \"/test/features/getsessiondetails.feature\"\n\n/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py:192: StepDefinitionNotFoundError"
+            },
+            "teardown": {
+                "duration": 0.00018712691962718964,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_request_session_status.py::test_request_session_status_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-target_BB_Id-sucess]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_request_session_status_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-target_BB_Id-sucess]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535-target_BB_Id-sucess",
+                "test_request_session_status.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003511756658554077,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.01859794184565544,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024222489446401596,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_send_session_alerts.py::test_send_session_alert_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-4524453535-4524453535]",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_send_session_alert_for_scheduler_api_smoke_test[healthngo1-healthworker-4524453535-4524453535-4524453535]",
+                "usefixtures",
+                "parametrize",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "healthngo1-healthworker-4524453535-4524453535-4524453535",
+                "test_send_session_alerts.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.000315297394990921,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012597467750310898,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00025292113423347473,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_sessioncreate.py::test_create_session_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_create_session_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_sessioncreate.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.0003073588013648987,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.016832427121698856,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.0002688206732273102,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_update_alert.py::test_update_an_existing_alert_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_update_an_existing_alert_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_update_alert.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00033136364072561264,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.010267329402267933,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00023917481303215027,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_update_entity.py::test_update_an_entity_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_update_an_entity_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_update_entity.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00030877813696861267,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.010080667212605476,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00024203117936849594,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_update_session.py::test_update_a_session_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_update_a_session_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_update_session.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00030856020748615265,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012004888616502285,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00025665760040283203,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_update_session_status.py::test_update_a_session_status_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_update_a_session_status_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_update_session_status.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00031060632318258286,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.001952286809682846,
+                "outcome": "failed",
+                "longrepr": "file /usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py, line 217\n          @pytest.mark.usefixtures(*func_args)\n          def scenario_wrapper(request: FixtureRequest, _pytest_bdd_example: dict[str, str]) -> Any:\nE       fixture 'status' not found\n>       available fixtures: _pytest_bdd_example, anyio_backend, anyio_backend_name, anyio_backend_options, cache, capfd, capfdbinary, caplog, capsys, capsysbinary, doctest_namespace, include_metadata_in_junit_xml, json_metadata, metadata, monkeypatch, pytestbdd_stepdef_given_the invalid inputs for the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" to update an session status for source_BB_Id \"{source_BB_Id}\" with sessiontoken \"{sessiontoken}\" and status as \"{status}\", pytestbdd_stepdef_given_the requestor entity is \"{healthngo1}\" with role as \"{healthworker}\" to update an session status for source_BB_Id \"{source_BB_Id}\" with sessiontoken \"{sessiontoken:d}\" and status as \"{success}\" for smoke testing, pytestbdd_stepdef_given_the requestor entity is \"{requestor_Entity}\" with role as \"{requestor_Role}\" to update an session status for source_BB_Id \"{source_BB_Id}\" with sessiontoken \"{sessiontoken}\" and status as \"{status}\", pytestbdd_stepdef_given_trace, pytestbdd_stepdef_then_response code of Update request is \"{code:d}\", pytestbdd_stepdef_then_response code of Update request is \"{code:d}\" for smoke testing, pytestbdd_stepdef_then_response code of negative testing an Update request for invalid data is \"{status_code}\", pytestbdd_stepdef_then_trace, pytestbdd_stepdef_when_an Update request for an endpoint /session/update_session_Status/ is triggered to update session status for scheduler block, pytestbdd_stepdef_when_trace, pytestconfig, record_property, record_testsuite_property, record_xml_attribute, recwarn, smoke_put_request, tmp_path, tmp_path_factory, tmpdir, tmpdir_factory\n>       use 'pytest --fixtures [testpath]' for help on them.\n\n/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py:217"
+            },
+            "teardown": {
+                "duration": 0.00031283777207136154,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_update_subscribers.py::test_update_a_subscriber_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_update_a_subscriber_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_update_subscribers.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00037920381873846054,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.012337537482380867,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00019956659525632858,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_updateresources.py::test_update_resources_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "passed",
+            "keywords": [
+                "test_update_resources_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_updateresources.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00022559519857168198,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.011987450532615185,
+                "outcome": "passed"
+            },
+            "teardown": {
+                "duration": 0.00020041409879922867,
+                "outcome": "passed"
+            }
+        },
+        {
+            "nodeid": "test_updatesession.py::test_update_a_session_for_scheduler_api_smoke_test",
+            "lineno": 216,
+            "outcome": "failed",
+            "keywords": [
+                "test_update_a_session_for_scheduler_api_smoke_test",
+                "usefixtures",
+                "smoke",
+                "pytestmark",
+                "__scenario__",
+                "test_updatesession.py",
+                "step_defs"
+            ],
+            "setup": {
+                "duration": 0.00021617114543914795,
+                "outcome": "passed"
+            },
+            "call": {
+                "duration": 0.0013541532680392265,
+                "outcome": "failed",
+                "crash": {
+                    "path": "/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py",
+                    "lineno": 192,
+                    "message": "pytest_bdd.exceptions.StepDefinitionNotFoundError: Step definition is not found: Given \"the requestor entity is \"healthngo1\" with role as \"healthworker\" to update an session with its ID \"4524453535\"\". Line 8 in scenario \"Update a session for Scheduler API Smoke Test\" in the feature \"/test/features/updatesession.feature\""
+                },
+                "traceback": [
+                    {
+                        "path": "/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py",
+                        "lineno": 192,
+                        "message": "StepDefinitionNotFoundError"
+                    }
+                ],
+                "longrepr": "feature = Feature(scenarios=OrderedDict([('Update a session for Scheduler API Smoke Test', ScenarioTemplate(feature=..., name='U... API', tags=set(), background=None, line_number=1, description='Gherkin feature files for GovStack Scheduler services')\nscenario = Scenario(feature=Feature(scenarios=OrderedDict([('Update a session for Scheduler API Smoke Test', ScenarioTemplate(fea...g', line_number=10, indent=0, keyword='Then', failed=False, scenario=None, background=None, lines=[])], tags={'smoke'})\nrequest = <FixtureRequest for <Function test_update_a_session_for_scheduler_api_smoke_test>>\n\n    def _execute_scenario(feature: Feature, scenario: Scenario, request: FixtureRequest) -> None:\n        \"\"\"Execute the scenario.\n    \n        :param feature: Feature.\n        :param scenario: Scenario.\n        :param request: request.\n        :param encoding: Encoding.\n        \"\"\"\n        __tracebackhide__ = True\n        request.config.hook.pytest_bdd_before_scenario(request=request, feature=feature, scenario=scenario)\n    \n        try:\n            for step in scenario.steps:\n                step_func_context = get_step_function(request=request, step=step)\n                if step_func_context is None:\n                    exc = exceptions.StepDefinitionNotFoundError(\n                        f\"Step definition is not found: {step}. \"\n                        f'Line {step.line_number} in scenario \"{scenario.name}\" in the feature \"{scenario.feature.filename}\"'\n                    )\n                    request.config.hook.pytest_bdd_step_func_lookup_error(\n                        request=request, feature=feature, scenario=scenario, step=step, exception=exc\n                    )\n>                   raise exc\nE                   pytest_bdd.exceptions.StepDefinitionNotFoundError: Step definition is not found: Given \"the requestor entity is \"healthngo1\" with role as \"healthworker\" to update an session with its ID \"4524453535\"\". Line 8 in scenario \"Update a session for Scheduler API Smoke Test\" in the feature \"/test/features/updatesession.feature\"\n\n/usr/local/lib/python3.8/site-packages/pytest_bdd/scenario.py:192: StepDefinitionNotFoundError"
+            },
+            "teardown": {
+                "duration": 0.00018624868243932724,
+                "outcome": "passed"
+            }
+        }
+    ],
+    "warnings": [
+        {
+            "message": "Unknown pytest.mark.smoke - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+            "category": "PytestUnknownMarkWarning",
+            "when": "collect",
+            "filename": "/usr/local/lib/python3.8/site-packages/pytest_bdd/plugin.py",
+            "lineno": 127
+        },
+        {
+            "message": "Unknown pytest.mark.unit - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+            "category": "PytestUnknownMarkWarning",
+            "when": "collect",
+            "filename": "/usr/local/lib/python3.8/site-packages/pytest_bdd/plugin.py",
+            "lineno": 127
+        },
+        {
+            "message": "Unknown pytest.mark.happyregression - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+            "category": "PytestUnknownMarkWarning",
+            "when": "collect",
+            "filename": "/usr/local/lib/python3.8/site-packages/pytest_bdd/plugin.py",
+            "lineno": 127
+        },
+        {
+            "message": "Unknown pytest.mark.Negativeregression - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+            "category": "PytestUnknownMarkWarning",
+            "when": "collect",
+            "filename": "/usr/local/lib/python3.8/site-packages/pytest_bdd/plugin.py",
+            "lineno": 127
+        },
+        {
+            "message": "Unknown pytest.mark.negativeregression - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/stable/how-to/mark.html",
+            "category": "PytestUnknownMarkWarning",
+            "when": "collect",
+            "filename": "/usr/local/lib/python3.8/site-packages/pytest_bdd/plugin.py",
+            "lineno": 127
+        }
+    ]
+}
