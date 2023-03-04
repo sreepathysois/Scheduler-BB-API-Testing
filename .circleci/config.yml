@@ -26,7 +26,7 @@ jobs:
           command: docker ps
       - run:
           name: Run cucumber tests against Register BB Mock 
-          command: docker  exec -i pytest  pytest 
+          command: docker  exec -i pytest  pytest -k smoke -v -s --json-report --json-report-indent=4 --json-report-file=../test_result/smoke_testing_report.json
                 
                 
 
