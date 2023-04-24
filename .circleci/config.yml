@@ -27,7 +27,7 @@ jobs:
           
       - run:
           name: Run cucumber tests against Register BB Mock 
-          command: docker  inspect myapi
+          command: docker  logs myapi
       - run:
           name: Run cucumber tests against Register BB Mock 
           command: docker  exec -i pytest  curl -X GET http://myapi:3000/event/list_details
