@@ -25,6 +25,9 @@ jobs:
           name: Check Status of Testing Containers are Deployed 
           command: docker ps
       - run:
+          name: Run cucumber tests against Register BB Mock 
+          command: docker  exec -i pytest  curl -X GET http://myapi:3000/event/list_details
+      - run:
           name: Create Test Result Directory
           command: mkdir -p /home/circleci/test_result
       - run:
