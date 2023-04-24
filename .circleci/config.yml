@@ -24,6 +24,10 @@ jobs:
       - run:
           name: Check Status of Testing Containers are Deployed 
           command: docker ps
+          
+      - run:
+          name: Run cucumber tests against Register BB Mock 
+          command: docker  inspect myapi
       - run:
           name: Run cucumber tests against Register BB Mock 
           command: docker  exec -i pytest  curl -X GET http://myapi:3000/event/list_details
