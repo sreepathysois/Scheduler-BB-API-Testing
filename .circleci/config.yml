@@ -1,47 +1,24 @@
+# Use the latest 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/2.0/configuration-reference
 version: 2.1
+setup: true
 
-jobs:
-  deployment-and-api-tests:
-    machine:
-      image: ubuntu-2004:202010-01
-    steps:
-      - checkout
-      - run:
-          name: 'Test Scheduler Build Block API'
-          command: 'echo testing all examples in /examples against test suite in /test'
-      - run:
-          name: Deploy Mock APP for Scheduler BB API and PyTest Containers
-          command: cd examples/mock && docker-compose up --build -d
-      - run:
-          name: Check Status of Mock App and API Testing Containers
-          command: docker ps
-      - run:
-          name: Testing Scheduler BB API
-          command: 'echo testing using containers'
-      - run:
-          name: Check Status of Testing Containers are Deployed
-          command: docker ps
-      - run:
-          name: Run Pytest tests against Register BB Mock to generate test result in Junit XML Format for Test Summary
-          command: docker exec -i pytest pytest -k smoke -s --junit-xml=/tmp/test-results/pytest-results.xml || true
-      - run:
-          name: Run cucumber tests against Register BB Mock to generate test result in JSON Format
-          command: docker  exec -i pytest  pytest -k smoke  -s --json-report --json-report-indent=4 --json-report-file=/tmp/test-results/smoke_testing_report.json || true
-      - run:
-          name: Copy test results to host machine
-          command: docker cp pytest:/tmp/test-results /tmp
-      - store_test_results:
-          path: /tmp/test-results
-          prefix: junit-
-          destination: /test-results/
-      - store_artifacts:
-          path: /tmp/test-results
+orbs:
+  test-harness: govstack-working-group/testutils@1.0.1
 
+# Invoke jobs via workflows
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  deployment-and-api-tests:
+
+  test_everything:
     jobs:
-      - deployment-and-api-tests:
-          filters:
-            branches:
-              only:
-                - main
+      - test-harness/create-config:
+          post-steps: # Persist to workspace has to be defined in main workflow
+            - persist_to_workspace:
+                root: workspace
+                paths:
+                  - generated.yml
+      - test-harness/execute-tests:
+          requires:
+            - test-harness/create-config
+

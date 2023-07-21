@@ -12,16 +12,7 @@ services:
       - type: bind
         source: ../../api/Scheduler_Updated_Latest_OpenAPI_Spec.json    
         target: /data 
-  pytest:
-   build:
-     context: ../../test/.
-   container_name: pytest
-   tty: true
-   stdin_open: true
-   networks:
-      demo:
-
 
 networks:
-      demo:
- 
+  demo:
+    driver: bridge 
